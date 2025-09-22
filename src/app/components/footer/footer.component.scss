@@ -1,0 +1,139 @@
+#footer {
+  background-color: var(--black-color);
+  color: var(--white-color);
+  padding: 4rem 0 0;
+}
+
+.footer-widget {
+  margin-bottom: 2rem;
+  
+  .widget-title {
+    color: var(--white-color);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    font-family: 'Jost', sans-serif;
+  }
+  
+  p {
+    color: var(--gray-color-500);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  
+  .social-link {
+    width: 40px;
+    height: 40px;
+    background-color: var(--gray-color-800);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      background-color: var(--primary-color);
+      transform: translateY(-3px);
+    }
+    
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  
+  li {
+    margin-bottom: 0.75rem;
+    
+    a {
+      color: var(--gray-color-500);
+      text-decoration: none;
+      transition: color 0.3s ease;
+      
+      &:hover {
+        color: var(--primary-color);
+      }
+    }
+  }
+}
+
+.contact-info {
+  p {
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    
+    strong {
+      color: var(--white-color);
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+  }
+}
+
+#footer-bottom {
+  background-color: var(--gray-color-800);
+  padding: 1.5rem 0;
+  margin-top: 3rem;
+  border-top: 1px solid var(--gray-color-800);
+}
+
+.copyright {
+  color: var(--gray-color-500);
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.payment-methods {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  
+  .payment-icon {
+    height: 30px;
+    width: auto;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+    
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #footer {
+    padding: 3rem 0 0;
+  }
+  
+  .footer-widget {
+    margin-bottom: 2.5rem;
+  }
+  
+  .social-links {
+    justify-content: center;
+  }
+  
+  .payment-methods {
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  
+  .copyright {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+}

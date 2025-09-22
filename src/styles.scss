@@ -1,0 +1,189 @@
+/* Bootstrap 5 Custom Variables */
+:root {
+  --bs-primary: #8B7355;
+  --bs-secondary: #6c757d;
+  --bs-success: #198754;
+  --bs-info: #0dcaf0;
+  --bs-warning: #ffc107;
+  --bs-danger: #dc3545;
+  --bs-light: #f8f9fa;
+  --bs-dark: #212529;
+  
+  /* Custom Design Dwell Diaries Colors */
+  --warm-brown: #8B7355;
+  --warm-beige: #F5F2ED;
+  --cream: #FDFCF9;
+  --light-blue: #F8F6F3;
+}
+
+/* Global Typography */
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--black-color);
+  background-color: var(--white-color);
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* Bootstrap 5 Full Width Utilities */
+.w-100 {
+  width: 100% !important;
+}
+
+.vw-100 {
+  width: 100vw !important;
+}
+
+.mw-100 {
+  max-width: 100% !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Jost', sans-serif;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+/* Utility Classes */
+.bg-light-blue {
+  background-color: var(--light-blue-color) !important;
+}
+
+.bg-gray {
+  background-color: var(--gray-color) !important;
+}
+
+.padding-large {
+  padding: 80px 0;
+}
+
+.padding-xlarge {
+  padding: 100px 0;
+}
+
+.no-padding-top {
+  padding-top: 0 !important;
+}
+
+/* Bootstrap 5 Custom Styles for Design Dwell Diaries */
+
+/* Custom Button Styles */
+.btn-primary {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background-color: #7a5f4a;
+    border-color: #7a5f4a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(139, 115, 85, 0.3);
+  }
+}
+
+/* Custom Background Colors */
+.bg-warm-beige {
+  background-color: var(--warm-beige) !important;
+}
+
+.bg-cream {
+  background-color: var(--cream) !important;
+}
+
+.bg-light-blue {
+  background-color: var(--light-blue) !important;
+}
+
+/* Swiper Customization */
+.swiper-pagination-bullet {
+  background: var(--bs-primary) !important;
+  opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1 !important;
+}
+
+/* Section Styles */
+.section-title {
+  text-align: center;
+  margin-bottom: 60px;
+
+  h2 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: var(--black-color);
+  }
+
+  p {
+    font-size: 1.1rem;
+    color: var(--accent-color);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .padding-large {
+    padding: 40px 0;
+  }
+
+  .padding-xlarge {
+    padding: 60px 0;
+  }
+
+  .section-title h2 {
+    font-size: 2rem;
+  }
+}
+
+/* Animation Classes */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.6s ease;
+
+  &.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.6s ease;
+
+  &.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

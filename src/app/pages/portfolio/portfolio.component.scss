@@ -1,0 +1,25 @@
+.portfolio-page {
+  padding-top: 100px;
+  min-height: 100vh;
+  background-color: var(--cream);
+}
+
+.page-header {
+  text-align: center;
+  padding: 4rem 0;
+  
+  h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--black-color);
+    margin-bottom: 1rem;
+    font-family: 'Jost', sans-serif;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    color: var(--accent-color);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}

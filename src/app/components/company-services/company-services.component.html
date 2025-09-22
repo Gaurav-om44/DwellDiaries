@@ -1,0 +1,22 @@
+<section id="company-services" class="py-5 bg-warm-beige">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-3 col-md-6" *ngFor="let service of services">
+        <div class="card h-100 border-0 shadow-sm text-center">
+          <div class="card-body p-4">
+            <div class="mb-3">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-primary">
+                <path *ngIf="service.icon === 'home'" d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <path *ngIf="service.icon === 'briefcase'" d="M16 4v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2z"></path>
+                <path *ngIf="service.icon === 'palette'" d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"></path>
+                <path *ngIf="service.icon === 'ruler'" d="M21 3H3v18h18V3zM5 19V5h14v14H5z"></path>
+              </svg>
+            </div>
+            <h5 class="card-title fw-bold">{{ service.title }}</h5>
+            <p class="card-text text-muted">{{ service.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

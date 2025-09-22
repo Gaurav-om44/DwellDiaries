@@ -1,0 +1,17 @@
+// Home page specific styles
+main {
+  padding-top: 80px; // Account for fixed header
+}
+
+// Ensure proper spacing between sections
+app-billboard,
+app-company-services,
+app-mobile-products,
+app-smart-watches,
+app-yearly-sale,
+app-latest-blog,
+app-testimonials,
+app-subscribe,
+app-instagram {
+  display: block;
+}
