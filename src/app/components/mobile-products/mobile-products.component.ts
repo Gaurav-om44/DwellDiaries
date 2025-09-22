@@ -1,5 +1,4 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
-import { Swiper } from 'swiper';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 export interface DesignProject {
@@ -17,8 +16,7 @@ export interface DesignProject {
   templateUrl: './mobile-products.component.html',
   styleUrls: ['./mobile-products.component.scss']
 })
-export class MobileProductsComponent implements OnInit, AfterViewInit {
-  swiper: Swiper | undefined;
+export class MobileProductsComponent implements OnInit {
   featuredProjects: DesignProject[] = [
     {
       id: 1,
@@ -73,52 +71,8 @@ export class MobileProductsComponent implements OnInit, AfterViewInit {
     this.loadFeaturedProjects();
   }
 
-  ngAfterViewInit(): void {
-    this.initSwiper();
-  }
-
   private loadFeaturedProjects(): void {
     // Projects are already loaded in the array
-  }
-
-  private initSwiper(): void {
-    setTimeout(() => {
-      this.swiper = new Swiper('.mobile-products-swiper', {
-        slidesPerView: 4,
-        spaceBetween: 20,
-        loop: true,
-        autoplay: {
-          delay: 3000,
-          disableOnInteraction: false,
-        },
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-        breakpoints: {
-          0: {
-            slidesPerView: 1,
-            spaceBetween: 10,
-          },
-          576: {
-            slidesPerView: 2,
-            spaceBetween: 15,
-          },
-          768: {
-            slidesPerView: 3,
-            spaceBetween: 20,
-          },
-          992: {
-            slidesPerView: 4,
-            spaceBetween: 20,
-          }
-        }
-      });
-    }, 100);
   }
 
   viewProject(project: DesignProject): void {

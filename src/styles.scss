@@ -39,6 +39,19 @@ html, body {
   width: 100%;
 }
 
+/* Ensure no gaps between elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Remove any default margins from main content */
+main {
+  margin: 0;
+  padding: 0;
+}
+
 /* Bootstrap 5 Full Width Utilities */
 .w-100 {
   width: 100% !important;

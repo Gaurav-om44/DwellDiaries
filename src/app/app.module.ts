@@ -12,7 +12,6 @@ import { SearchPopupComponent } from './components/search-popup/search-popup.com
 import { BillboardComponent } from './components/billboard/billboard.component';
 import { CompanyServicesComponent } from './components/company-services/company-services.component';
 import { MobileProductsComponent } from './components/mobile-products/mobile-products.component';
-import { SmartWatchesComponent } from './components/smart-watches/smart-watches.component';
 import { YearlySaleComponent } from './components/yearly-sale/yearly-sale.component';
 import { LatestBlogComponent } from './components/latest-blog/latest-blog.component';
 import { TestimonialsComponent } from './components/testimonials/testimonials.component';
@@ -39,7 +38,6 @@ import { CartService } from './services/cart.service';
     BillboardComponent,
     CompanyServicesComponent,
     MobileProductsComponent,
-    SmartWatchesComponent,
     YearlySaleComponent,
     LatestBlogComponent,
     TestimonialsComponent,

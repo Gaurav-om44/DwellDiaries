@@ -5,6 +5,10 @@
   margin: 0;
   padding: 0;
   width: 100%;
+  margin-top: 0;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
 .billboard-slide {
@@ -16,6 +20,7 @@
   width: 100%;
   margin: 0;
   padding: 0;
+  top: 0;
   
   &::before {
     content: '';
@@ -32,7 +37,7 @@
 .billboard-content {
   position: relative;
   z-index: 2;
-  padding: 2rem 0;
+  padding: 6rem 0 2rem 0;
   
   .billboard-title {
     font-size: 3.5rem;
@@ -84,62 +89,6 @@
   }
 }
 
-// Swiper Navigation
-.swiper-arrow-prev,
-.swiper-arrow-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
-  width: 60px;
-  height: 60px;
-  background: var(--white-color);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-  
-  &:hover {
-    background: var(--primary-color);
-    color: var(--white-color);
-    transform: translateY(-50%) scale(1.1);
-  }
-  
-  svg {
-    width: 24px;
-    height: 24px;
-  }
-}
-
-.swiper-arrow-prev {
-  left: 30px;
-}
-
-.swiper-arrow-next {
-  right: 30px;
-}
-
-// Swiper Pagination
-.swiper-pagination {
-  bottom: 30px !important;
-  
-  .swiper-pagination-bullet {
-    width: 12px;
-    height: 12px;
-    background: var(--white-color);
-    opacity: 0.5;
-    transition: all 0.3s ease;
-    
-    &.swiper-pagination-bullet-active {
-      opacity: 1;
-      background: var(--primary-color);
-      transform: scale(1.2);
-    }
-  }
-}
 
 // Responsive Design
 @media (max-width: 1200px) {
@@ -168,24 +117,6 @@
     }
   }
   
-  .swiper-arrow-prev,
-  .swiper-arrow-next {
-    width: 50px;
-    height: 50px;
-    
-    svg {
-      width: 20px;
-      height: 20px;
-    }
-  }
-  
-  .swiper-arrow-prev {
-    left: 15px;
-  }
-  
-  .swiper-arrow-next {
-    right: 15px;
-  }
 }
 
 @media (max-width: 768px) {
@@ -208,14 +139,4 @@
     }
   }
   
-  .swiper-arrow-prev,
-  .swiper-arrow-next {
-    width: 40px;
-    height: 40px;
-    
-    svg {
-      width: 16px;
-      height: 16px;
-    }
-  }
 }

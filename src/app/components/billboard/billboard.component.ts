@@ -1,13 +1,11 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
-import { Swiper } from 'swiper';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-billboard',
   templateUrl: './billboard.component.html',
   styleUrls: ['./billboard.component.scss']
 })
-export class BillboardComponent implements OnInit, AfterViewInit {
-  swiper: Swiper | undefined;
+export class BillboardComponent implements OnInit {
 
   slides = [
     {
@@ -42,36 +40,5 @@ export class BillboardComponent implements OnInit, AfterViewInit {
   constructor() { }
 
   ngOnInit(): void {
-  }
-
-  ngAfterViewInit(): void {
-    this.initSwiper();
-  }
-
-  private initSwiper(): void {
-    this.swiper = new Swiper('.main-swiper', {
-      speed: 500,
-      loop: true,
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
-      },
-      navigation: {
-        nextEl: '.swiper-arrow-next',
-        prevEl: '.swiper-arrow-prev',
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-    });
-  }
-
-  nextSlide(): void {
-    this.swiper?.slideNext();
-  }
-
-  prevSlide(): void {
-    this.swiper?.slidePrev();
   }
 }
