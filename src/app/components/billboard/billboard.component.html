@@ -1,25 +1,60 @@
 <section id="billboard" class="position-relative overflow-hidden bg-light-blue" style="margin: 0; padding: 0; top: 0; left: 0;">
   <div class="container-fluid p-0">
-    <div class="billboard-slide d-flex align-items-center position-relative" [style.background-image]="'url(' + slides[0].image + ')'" style="min-height: 100vh; background-size: cover; background-position: center; margin: 0; padding: 0; top: 0; left: 0;">
-      <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(255, 255, 255, 0.1);"></div>
+    <div class="billboard-slide d-flex align-items-center position-relative" style="min-height: 100vh; margin: 0; padding: 0; top: 0; left: 0;">
+      <!-- Carousel Container -->
+      <div class="carousel-container position-absolute top-0 start-0 w-100 h-100">
+        <div class="carousel-slide" *ngFor="let slide of slides; let i = index" 
+             [class.active]="i === currentSlideIndex"
+             [style.background-image]="'url(' + slide.image + ')'"
+             style="height: 100%; background-size: cover; background-position: center; position: absolute; top: 0; left: 0; width: 100%; opacity: 0; transition: opacity 0.5s ease;">
+        </div>
+      </div>
+      
+      <!-- Overlay -->
+      <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(255, 255, 255, 0.1); z-index: 1;"></div>
+      
+      <!-- Content -->
       <div class="container-fluid position-relative" style="z-index: 2;">
         <div class="row align-items-center min-vh-100">
           <div class="col-lg-6">
             <div class="billboard-content p-4">
-              <h1 class="display-4 fw-bold text-dark mb-3">{{ slides[0].title }}</h1>
-              <h2 class="h4 text-dark mb-4">{{ slides[0].subtitle }}</h2>
-              <p class="lead text-muted mb-4">{{ slides[0].description }}</p>
-              <a [routerLink]="slides[0].buttonLink" class="btn btn-primary btn-lg px-4 py-3 rounded-pill">
-                {{ slides[0].buttonText }}
+              <h1 class="display-4 fw-bold text-dark mb-3">{{ slides[currentSlideIndex].title }}</h1>
+              <h2 class="h4 text-dark mb-4">{{ slides[currentSlideIndex].subtitle }}</h2>
+              <p class="lead text-muted mb-4">{{ slides[currentSlideIndex].description }}</p>
+              <a [routerLink]="slides[currentSlideIndex].buttonLink" class="btn btn-primary btn-lg px-4 py-3 rounded-pill">
+                {{ slides[currentSlideIndex].buttonText }}
               </a>
             </div>
           </div>
           <div class="col-lg-6">
             <div class="billboard-image text-center">
-              <img [src]="slides[0].image" [alt]="slides[0].title" class="img-fluid rounded shadow">
+              <img [src]="slides[currentSlideIndex].image" [alt]="slides[currentSlideIndex].title" class="img-fluid rounded shadow">
             </div>
           </div>
         </div>
+      </div>
+      
+      <!-- Carousel Navigation -->
+      <div class="carousel-nav position-absolute" style="bottom: 30px; left: 50%; transform: translateX(-50%); z-index: 10;">
+        <button class="btn btn-light btn-sm me-2" (click)="prevSlide()">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+          </svg>
+        </button>
+        <button class="btn btn-light btn-sm" (click)="nextSlide()">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"/>
+          </svg>
+        </button>
+      </div>
+      
+      <!-- Carousel Indicators -->
+      <div class="carousel-indicators position-absolute" style="bottom: 30px; right: 30px; z-index: 10;">
+        <span *ngFor="let slide of slides; let i = index" 
+              class="indicator" 
+              [class.active]="i === currentSlideIndex"
+              (click)="goToSlide(i)">
+        </span>
       </div>
     </div>
   </div>

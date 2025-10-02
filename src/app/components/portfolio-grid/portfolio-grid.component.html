@@ -1,0 +1,96 @@
+<section id="portfolio-grid" class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="display-4 fw-bold text-dark mb-3">Entryway Designs</h2>
+      <p class="lead text-muted">Explore our collection of minimalist entryway designs crafted with care and precision</p>
+    </div>
+    
+    <div class="row g-4">
+      <!-- Warm Beige Entryway -->
+      <div class="col-lg-4 col-md-6">
+        <app-entryway-design 
+          [design]="entrywayDesigns[0]"
+          [index]="0">
+        </app-entryway-design>
+      </div>
+      
+      <!-- Aesthetic Text -->
+      <div class="col-lg-4 col-md-6">
+        <div class="design-card h-100 d-flex align-items-center justify-content-center text-center p-4" 
+             style="background: linear-gradient(135deg, #f5f5f0 0%, #e8e8e0 100%); min-height: 300px; border-radius: 12px;">
+          <div>
+            <h3 class="fw-bold text-dark mb-0" style="font-size: 2rem; letter-spacing: 2px;">(AESTHETIC)</h3>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Dramatic Dark Entryway -->
+      <div class="col-lg-4 col-md-6">
+        <app-entryway-design 
+          [design]="entrywayDesigns[1]"
+          [index]="1">
+        </app-entryway-design>
+      </div>
+      
+      <!-- Serene Green Entryway -->
+      <div class="col-lg-4 col-md-6">
+        <app-entryway-design 
+          [design]="entrywayDesigns[2]"
+          [index]="2">
+        </app-entryway-design>
+      </div>
+      
+      <!-- Minimal Aesthetic Text -->
+      <div class="col-lg-4 col-md-6">
+        <div class="design-card h-100 d-flex align-items-center justify-content-center text-center p-4" 
+             style="background: linear-gradient(135deg, #f8f8f8 0%, #e8e8e8 100%); min-height: 300px; border-radius: 12px;">
+          <div>
+            <div class="d-flex justify-content-center mb-3">
+              <span class="fw-bold text-dark me-3" style="font-size: 1.5rem;">MINIMAL</span>
+              <span class="fw-bold text-dark" style="font-size: 1.5rem;">AESTHETIC</span>
+            </div>
+            <p class="text-muted mb-0" style="font-size: 0.9rem; line-height: 1.4;">
+              Crafted with care for all your needs.<br>
+              Created with passion and precision.<br>
+              Delivered with love.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Bright White Entryway -->
+      <div class="col-lg-4 col-md-6">
+        <app-entryway-design 
+          [design]="entrywayDesigns[3]"
+          [index]="3">
+        </app-entryway-design>
+      </div>
+      
+      <!-- Luxurious Dark Green Entryway -->
+      <div class="col-lg-4 col-md-6">
+        <app-entryway-design 
+          [design]="entrywayDesigns[4]"
+          [index]="4">
+        </app-entryway-design>
+      </div>
+      
+      <!-- Form Text -->
+      <div class="col-lg-4 col-md-6">
+        <div class="design-card h-100 d-flex align-items-center justify-content-center text-center p-4" 
+             style="background: linear-gradient(135deg, #f8f8f8 0%, #e8e8e8 100%); min-height: 300px; border-radius: 12px;">
+          <div>
+            <h3 class="fw-bold text-dark mb-0" style="font-size: 3rem; font-family: serif;">form.</h3>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Contemporary Peach Entryway -->
+      <div class="col-lg-4 col-md-6">
+        <app-entryway-design 
+          [design]="entrywayDesigns[5]"
+          [index]="5">
+        </app-entryway-design>
+      </div>
+    </div>
+  </div>
+</section>

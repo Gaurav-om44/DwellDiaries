@@ -12,6 +12,17 @@ import { SearchPopupComponent } from './components/search-popup/search-popup.com
 import { BillboardComponent } from './components/billboard/billboard.component';
 import { CompanyServicesComponent } from './components/company-services/company-services.component';
 import { MobileProductsComponent } from './components/mobile-products/mobile-products.component';
+import { ModernLivingRoomComponent } from './components/modern-living-room/modern-living-room.component';
+import { VillaProjectComponent } from './components/villa-project/villa-project.component';
+import { MixedUseDevelopmentComponent } from './components/mixed-use-development/mixed-use-development.component';
+import { PortfolioGridComponent } from './components/portfolio-grid/portfolio-grid.component';
+import { EntrywayDesignComponent } from './components/entryway-design/entryway-design.component';
+import { AccentChairsGridComponent } from './components/accent-chairs-grid/accent-chairs-grid.component';
+import { AccentChairComponent } from './components/accent-chair/accent-chair.component';
+import { ClocksGridComponent } from './components/clocks-grid/clocks-grid.component';
+import { ClockComponent } from './components/clock/clock.component';
+import { PlantersGridComponent } from './components/planters-grid/planters-grid.component';
+import { PlanterComponent } from './components/planter/planter.component';
 import { YearlySaleComponent } from './components/yearly-sale/yearly-sale.component';
 import { LatestBlogComponent } from './components/latest-blog/latest-blog.component';
 import { TestimonialsComponent } from './components/testimonials/testimonials.component';
@@ -38,6 +49,17 @@ import { CartService } from './services/cart.service';
     BillboardComponent,
     CompanyServicesComponent,
     MobileProductsComponent,
+    ModernLivingRoomComponent,
+    VillaProjectComponent,
+    MixedUseDevelopmentComponent,
+    PortfolioGridComponent,
+    EntrywayDesignComponent,
+    AccentChairsGridComponent,
+    AccentChairComponent,
+    ClocksGridComponent,
+    ClockComponent,
+    PlantersGridComponent,
+    PlanterComponent,
     YearlySaleComponent,
     LatestBlogComponent,
     TestimonialsComponent,

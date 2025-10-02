@@ -1,0 +1,133 @@
+.entryway-design-card {
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.design-image {
+  position: relative;
+  overflow: hidden;
+  
+  .design-overlay {
+    opacity: 0.8;
+  }
+  
+  .mirror-element {
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      width: 60%;
+      height: 60%;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+    }
+  }
+  
+  .console-element {
+    border-radius: 4px;
+  }
+  
+  .ottoman-element {
+    border-radius: 50%;
+  }
+}
+
+.design-content {
+  padding: 1.5rem;
+  
+  h5 {
+    color: var(--black-color);
+    font-family: 'Jost', sans-serif;
+    font-size: 1.1rem;
+  }
+  
+  p {
+    color: var(--gray-color-500);
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+}
+
+.design-features {
+  .badge {
+    font-weight: 500;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+}
+
+.design-actions {
+  .btn {
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 0.5rem 0.75rem;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-2px);
+    }
+    
+    svg {
+      transition: transform 0.3s ease;
+    }
+    
+    &:hover svg {
+      transform: scale(1.1);
+    }
+  }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .design-image {
+    height: 200px !important;
+  }
+  
+  .design-content {
+    padding: 1rem;
+    
+    h5 {
+      font-size: 1rem;
+    }
+    
+    p {
+      font-size: 0.85rem;
+    }
+  }
+  
+  .design-actions {
+    .btn {
+      font-size: 0.75rem;
+      padding: 0.4rem 0.6rem;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .design-image {
+    height: 180px !important;
+  }
+  
+  .design-content {
+    padding: 0.75rem;
+  }
+  
+  .design-features {
+    .badge {
+      font-size: 0.6rem;
+      padding: 0.25rem 0.5rem;
+    }
+  }
+}

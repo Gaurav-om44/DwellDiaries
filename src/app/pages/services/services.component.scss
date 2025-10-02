@@ -1,29 +1,270 @@
 .services-page {
-  padding-top: 100px;
+  background-color: var(--light-color);
   min-height: 100vh;
-  background-color: var(--cream);
 }
 
-.page-header {
-  text-align: center;
-  padding: 4rem 0;
+// Hero Section
+.services-hero {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
   
-  h1 {
-    font-size: 3rem;
-    font-weight: 700;
+  .hero-content {
+    h1 {
+      color: var(--black-color);
+      font-family: 'Jost', sans-serif;
+    }
+    
+    .hero-stats {
+      .stat-item {
+        h3 {
+          color: var(--primary-color);
+          font-size: 2.5rem;
+        }
+        
+        p {
+          color: var(--gray-color-500);
+          font-size: 0.9rem;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+  
+  .hero-image {
+    img {
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+// Service Cards
+.service-card {
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    border-color: var(--primary-color);
+  }
+  
+  .service-icon {
+    .icon-wrapper {
+      transition: all 0.3s ease;
+    }
+  }
+  
+  &:hover .service-icon .icon-wrapper {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(139, 115, 85, 0.3);
+  }
+  
+  h5 {
     color: var(--black-color);
-    margin-bottom: 1rem;
     font-family: 'Jost', sans-serif;
   }
   
   p {
-    font-size: 1.2rem;
-    color: var(--accent-color);
-    max-width: 600px;
-    margin: 0 auto;
+    color: var(--gray-color-500);
+    line-height: 1.6;
+  }
+  
+  .service-features {
+    li {
+      color: var(--gray-color-500);
+      font-size: 0.9rem;
+      
+      i {
+        color: var(--primary-color);
+      }
+    }
   }
 }
 
+// Process Steps
+.process-step {
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-5px);
+  }
+  
+  .step-number {
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(139, 115, 85, 0.2);
+  }
+  
+  &:hover .step-number {
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(139, 115, 85, 0.3);
+  }
+  
+  h5 {
+    color: var(--black-color);
+    font-family: 'Jost', sans-serif;
+  }
+  
+  p {
+    color: var(--gray-color-500);
+    line-height: 1.5;
+  }
+}
 
+// Specialized Cards
+.specialized-card {
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border-color: var(--secondary-color);
+  }
+  
+  .specialized-icon {
+    .icon-wrapper {
+      transition: all 0.3s ease;
+    }
+  }
+  
+  &:hover .specialized-icon .icon-wrapper {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(108, 117, 125, 0.3);
+  }
+  
+  h6 {
+    color: var(--black-color);
+    font-family: 'Jost', sans-serif;
+  }
+  
+  p {
+    color: var(--gray-color-500);
+    line-height: 1.4;
+  }
+}
 
+// CTA Section
+.cta-section {
+  background: linear-gradient(135deg, var(--primary-color) 0%, #8b6f47 100%);
+  
+  h3 {
+    font-family: 'Jost', sans-serif;
+  }
+  
+  .btn {
+    transition: all 0.3s ease;
+    font-weight: 600;
+    
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
 
+// Section Backgrounds
+.architectural-services {
+  background-color: var(--white);
+}
+
+.interior-services {
+  background-color: var(--light-color);
+}
+
+.design-process {
+  background-color: var(--white);
+}
+
+.specialized-services {
+  background-color: var(--light-color);
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .services-hero {
+    .hero-stats {
+      flex-direction: column;
+      gap: 1.5rem !important;
+      
+      .stat-item {
+        text-align: center;
+        
+        h3 {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+  
+  .service-card {
+    margin-bottom: 1.5rem;
+    
+    .row {
+      text-align: center;
+    }
+  }
+  
+  .process-step {
+    margin-bottom: 2rem;
+  }
+  
+  .specialized-card {
+    margin-bottom: 1rem;
+  }
+  
+  .cta-section {
+    text-align: center;
+    
+    .btn {
+      margin-top: 1rem;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .services-hero {
+    .hero-content {
+      h1 {
+        font-size: 2.5rem;
+      }
+      
+      .lead {
+        font-size: 1rem;
+      }
+    }
+  }
+  
+  .service-card {
+    padding: 1.5rem !important;
+    
+    h5 {
+      font-size: 1.1rem;
+    }
+    
+    p {
+      font-size: 0.9rem;
+    }
+  }
+  
+  .process-step {
+    h5 {
+      font-size: 1.1rem;
+    }
+    
+    p {
+      font-size: 0.9rem;
+    }
+  }
+  
+  .specialized-card {
+    padding: 1.5rem !important;
+    
+    h6 {
+      font-size: 1rem;
+    }
+    
+    p {
+      font-size: 0.85rem;
+    }
+  }
+}

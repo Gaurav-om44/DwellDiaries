@@ -1,0 +1,31 @@
+#clocks-grid {
+  background-color: var(--light-color);
+  position: relative;
+}
+
+.design-card {
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .design-card {
+    min-height: 250px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .design-card {
+    min-height: 200px !important;
+    
+    h3 {
+      font-size: 1.5rem !important;
+    }
+  }
+}

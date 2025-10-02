@@ -1,0 +1,96 @@
+<section id="planters-grid" class="py-5 bg-warm-beige">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="display-4 fw-bold text-dark mb-3">Designer Planters</h2>
+      <p class="lead text-muted">Beautiful planters that bring nature indoors with style and sophistication</p>
+    </div>
+    
+    <div class="row g-4">
+      <!-- Ceramic Planter -->
+      <div class="col-lg-4 col-md-6">
+        <app-planter 
+          [planter]="planters[0]"
+          [index]="0">
+        </app-planter>
+      </div>
+      
+      <!-- Aesthetic Text -->
+      <div class="col-lg-4 col-md-6">
+        <div class="design-card h-100 d-flex align-items-center justify-content-center text-center p-4" 
+             style="background: linear-gradient(135deg, #f5f5f0 0%, #e8e8e0 100%); min-height: 300px; border-radius: 12px;">
+          <div>
+            <h3 class="fw-bold text-dark mb-0" style="font-size: 2rem; letter-spacing: 2px;">(AESTHETIC)</h3>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Hanging Planter -->
+      <div class="col-lg-4 col-md-6">
+        <app-planter 
+          [planter]="planters[1]"
+          [index]="1">
+        </app-planter>
+      </div>
+      
+      <!-- Terracotta Planter -->
+      <div class="col-lg-4 col-md-6">
+        <app-planter 
+          [planter]="planters[2]"
+          [index]="2">
+        </app-planter>
+      </div>
+      
+      <!-- Minimal Aesthetic Text -->
+      <div class="col-lg-4 col-md-6">
+        <div class="design-card h-100 d-flex align-items-center justify-content-center text-center p-4" 
+             style="background: linear-gradient(135deg, #f8f8f8 0%, #e8e8e8 100%); min-height: 300px; border-radius: 12px;">
+          <div>
+            <div class="d-flex justify-content-center mb-3">
+              <span class="fw-bold text-dark me-3" style="font-size: 1.5rem;">MINIMAL</span>
+              <span class="fw-bold text-dark" style="font-size: 1.5rem;">AESTHETIC</span>
+            </div>
+            <p class="text-muted mb-0" style="font-size: 0.9rem; line-height: 1.4;">
+              Crafted with care for all your needs.<br>
+              Created with passion and precision.<br>
+              Delivered with love.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Modern Planter -->
+      <div class="col-lg-4 col-md-6">
+        <app-planter 
+          [planter]="planters[3]"
+          [index]="3">
+        </app-planter>
+      </div>
+      
+      <!-- Vintage Planter -->
+      <div class="col-lg-4 col-md-6">
+        <app-planter 
+          [planter]="planters[4]"
+          [index]="4">
+        </app-planter>
+      </div>
+      
+      <!-- Form Text -->
+      <div class="col-lg-4 col-md-6">
+        <div class="design-card h-100 d-flex align-items-center justify-content-center text-center p-4" 
+             style="background: linear-gradient(135deg, #f8f8f8 0%, #e8e8e8 100%); min-height: 300px; border-radius: 12px;">
+          <div>
+            <h3 class="fw-bold text-dark mb-0" style="font-size: 3rem; font-family: serif;">form.</h3>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Contemporary Planter -->
+      <div class="col-lg-4 col-md-6">
+        <app-planter 
+          [planter]="planters[5]"
+          [index]="5">
+        </app-planter>
+      </div>
+    </div>
+  </div>
+</section>
