@@ -162,6 +162,50 @@
   }
 }
 
+// Decor Product Design Cards
+.decor-card {
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    border-color: var(--success-color);
+  }
+  
+  .decor-icon {
+    .icon-wrapper {
+      transition: all 0.3s ease;
+    }
+  }
+  
+  &:hover .decor-icon .icon-wrapper {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(25, 135, 84, 0.3);
+  }
+  
+  h5 {
+    color: var(--black-color);
+    font-family: 'Jost', sans-serif;
+  }
+  
+  p {
+    color: var(--gray-color-500);
+    line-height: 1.6;
+  }
+  
+  .decor-features {
+    li {
+      color: var(--gray-color-500);
+      font-size: 0.9rem;
+      
+      i {
+        color: var(--success-color);
+      }
+    }
+  }
+}
+
 // Section Backgrounds
 .architectural-services {
   background-color: var(--white);
@@ -172,6 +216,10 @@
 }
 
 .design-process {
+  background-color: var(--white);
+}
+
+.decor-product-design {
   background-color: var(--white);
 }
 
@@ -210,6 +258,10 @@
   
   .specialized-card {
     margin-bottom: 1rem;
+  }
+  
+  .decor-card {
+    margin-bottom: 1.5rem;
   }
   
   .cta-section {
@@ -265,6 +317,18 @@
     
     p {
       font-size: 0.85rem;
+    }
+  }
+  
+  .decor-card {
+    padding: 1.5rem !important;
+    
+    h5 {
+      font-size: 1.1rem;
+    }
+    
+    p {
+      font-size: 0.9rem;
     }
   }
 }

@@ -32,35 +32,18 @@ app-header {
 
 .navbar-brand {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   
-  .logo-text {
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: var(--bs-dark);
-    text-decoration: none;
-    font-family: 'Jost', sans-serif;
-    letter-spacing: 1px;
-    transition: color 0.3s ease;
-    line-height: 1.2;
-    margin-bottom: 0;
-    text-shadow: 0 1px 3px rgba(255, 255, 255, 0.8);
-
+  .logo-img {
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    height: 50px;
+    width: auto;
+    
     &:hover {
-      color: var(--bs-primary);
+      transform: scale(1.05);
+      filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
     }
-  }
-  
-  .logo-subtitle {
-    font-size: 0.6rem;
-    font-weight: 600;
-    color: var(--bs-secondary);
-    font-family: 'Jost', sans-serif;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    margin-left: 2px;
-    text-shadow: 0 1px 3px rgba(255, 255, 255, 0.8);
   }
 }
 
@@ -208,12 +191,8 @@ app-header {
   }
   
   .navbar-brand {
-    .logo-text {
-      font-size: 1.1rem;
-    }
-    
-    .logo-subtitle {
-      font-size: 0.55rem;
+    .logo-img {
+      height: 40px;
     }
   }
 }
