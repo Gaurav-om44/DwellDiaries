@@ -12,15 +12,6 @@ export class BillboardComponent implements OnInit, OnDestroy {
   slides = [
     {
       id: 1,
-      title: 'Interior Design Excellence',
-      subtitle: 'Transform Your Space',
-      description: 'Create beautiful, functional spaces that reflect your unique style and personality',
-      image: 'assets/images/billboard-1.jpg',
-      buttonText: 'View Portfolio',
-      buttonLink: '/portfolio'
-    },
-    {
-      id: 2,
       title: 'Residential Design',
       subtitle: 'Home Transformation',
       description: 'From concept to completion, we bring your dream home to life with expert design',
@@ -28,8 +19,16 @@ export class BillboardComponent implements OnInit, OnDestroy {
       buttonText: 'Our Services',
       buttonLink: '/services'
     },
-
     {
+      id: 2,
+      title: 'Interior Design Excellence',
+      subtitle: 'Transform Your Space',
+      description: 'Create beautiful, functional spaces that reflect your unique style and personality',
+      image: 'assets/images/billboard-1.jpg',
+      buttonText: 'View Portfolio',
+      buttonLink: '/portfolio'
+    },
+   {
       id: 3,
       title: 'Luxury Interiors',
       subtitle: 'Sophisticated Design',

@@ -23,11 +23,14 @@ import { ClocksGridComponent } from './components/clocks-grid/clocks-grid.compon
 import { ClockComponent } from './components/clock/clock.component';
 import { PlantersGridComponent } from './components/planters-grid/planters-grid.component';
 import { PlanterComponent } from './components/planter/planter.component';
+import { SideboardGridComponent } from './components/sideboard-grid/sideboard-grid.component';
+import { SideboardComponent } from './components/sideboard/sideboard.component';
 import { YearlySaleComponent } from './components/yearly-sale/yearly-sale.component';
 import { LatestBlogComponent } from './components/latest-blog/latest-blog.component';
 import { TestimonialsComponent } from './components/testimonials/testimonials.component';
 import { SubscribeComponent } from './components/subscribe/subscribe.component';
 import { InstagramComponent } from './components/instagram/instagram.component';
+import { ImageModalComponent } from './components/image-modal/image-modal.component';
 import { HomeComponent } from './pages/home/home.component';
 import { PortfolioComponent } from './pages/portfolio/portfolio.component';
 import { ServicesComponent } from './pages/services/services.component';
@@ -60,11 +63,14 @@ import { CartService } from './services/cart.service';
     ClockComponent,
     PlantersGridComponent,
     PlanterComponent,
+    SideboardGridComponent,
+    SideboardComponent,
     YearlySaleComponent,
     LatestBlogComponent,
     TestimonialsComponent,
     SubscribeComponent,
     InstagramComponent,
+    ImageModalComponent,
     HomeComponent,
     PortfolioComponent,
     ServicesComponent,

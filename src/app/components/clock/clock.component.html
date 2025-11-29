@@ -1,5 +1,5 @@
 <div class="clock-card h-100">
-  <div class="clock-image position-relative overflow-hidden rounded-3 mb-3" 
+  <div class="clock-image position-relative overflow-hidden rounded-3 mb-3" (click)="openImageModal()" style="cursor: pointer;" 
        [style.background-color]="clock.color === 'Black' ? '#2c2c2c' : 
                                  clock.color === 'Antique' ? '#cd853f' :
                                  clock.color === 'Natural' ? '#f5f5dc' :
@@ -8,8 +8,14 @@
                                  clock.color === 'Silver' ? '#c0c0c0' : '#f8f8f8'"
        style="height: 250px; background-size: cover; background-position: center;">
     
-    <!-- Clock representation -->
-    <div class="clock-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">
+    <!-- Clock Image -->
+    <img [src]="clock.image" 
+         [alt]="clock.title"
+         class="position-absolute top-0 start-0 w-100 h-100"
+         style="object-fit: cover; object-position: center; z-index: 1;">
+    
+    <!-- Clock representation (hidden when image is present) -->
+    <div class="clock-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center" style="display: none;">
       <!-- Clock face -->
       <div class="clock-face" 
            [style.width]="clock.type === 'Mantel' ? '80px' : '60px'"

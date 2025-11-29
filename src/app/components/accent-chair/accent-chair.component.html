@@ -1,7 +1,8 @@
 <div class="accent-chair-card h-100">
   <div class="chair-image position-relative overflow-hidden rounded-3 mb-3" 
        [style.background-image]="'url(' + chair.image + ')'"
-       style="height: 250px; background-size: cover; background-position: center; background-repeat: no-repeat;">
+       style="height: 250px; background-size: cover; background-position: center; background-repeat: no-repeat; cursor: pointer;"
+       (click)="openImageModal()">
   </div>
   
   <div class="chair-content">

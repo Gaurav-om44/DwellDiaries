@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ImageModalService } from '../../services/image-modal.service';
 
-export interface Clock {
+export interface Sideboard {
   id: number;
   title: string;
   description: string;
@@ -12,16 +12,16 @@ export interface Clock {
   features: string[];
   price?: string;
   color: string;
-  type: string;
+  size: string;
 }
 
 @Component({
-  selector: 'app-clock',
-  templateUrl: './clock.component.html',
-  styleUrls: ['./clock.component.scss']
+  selector: 'app-sideboard',
+  templateUrl: './sideboard.component.html',
+  styleUrls: ['./sideboard.component.scss']
 })
-export class ClockComponent implements OnInit {
-  @Input() clock!: Clock;
+export class SideboardComponent implements OnInit {
+  @Input() sideboard!: Sideboard;
   @Input() index!: number;
 
   constructor(
@@ -32,23 +32,25 @@ export class ClockComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  viewClock(): void {
-    console.log('Viewing clock:', this.clock.title);
-    this.router.navigate(['/portfolio', this.clock.id]);
+  viewSideboard(): void {
+    console.log('Viewing sideboard:', this.sideboard.title);
+    this.router.navigate(['/portfolio', this.sideboard.id]);
   }
 
   getQuote(): void {
-    console.log('Getting quote for:', this.clock.title);
+    console.log('Getting quote for:', this.sideboard.title);
     this.router.navigate(['/contact'], { 
       queryParams: { 
-        product: this.clock.id,
-        title: this.clock.title,
-        type: 'clock'
+        product: this.sideboard.id,
+        title: this.sideboard.title,
+        type: 'sideboard'
       } 
     });
   }
 
   openImageModal(): void {
-    this.imageModalService.openModal(this.clock.image, this.clock.title);
+    this.imageModalService.openModal(this.sideboard.image, this.sideboard.title);
   }
 }
+
+

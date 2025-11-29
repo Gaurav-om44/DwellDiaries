@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ImageModalService } from '../../services/image-modal.service';
 
 export interface EntrywayDesign {
   id: number;
@@ -21,7 +22,10 @@ export class EntrywayDesignComponent implements OnInit {
   @Input() design!: EntrywayDesign;
   @Input() index!: number;
 
-  constructor(private router: Router) { }
+  constructor(
+    private router: Router,
+    private imageModalService: ImageModalService
+  ) { }
 
   ngOnInit(): void {
   }
@@ -41,5 +45,9 @@ export class EntrywayDesignComponent implements OnInit {
         title: this.design.title 
       } 
     });
+  }
+
+  openImageModal(): void {
+    this.imageModalService.openModal(this.design.image, this.design.title);
   }
 }

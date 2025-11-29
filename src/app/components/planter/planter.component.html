@@ -1,5 +1,5 @@
 <div class="planter-card h-100">
-  <div class="planter-image position-relative overflow-hidden rounded-3 mb-3" 
+  <div class="planter-image position-relative overflow-hidden rounded-3 mb-3" (click)="openImageModal()" style="cursor: pointer;" 
        [style.background-color]="planter.color === 'White' ? '#ffffff' : 
                                  planter.color === 'Natural' ? '#f5f5dc' :
                                  planter.color === 'Terracotta' ? '#cd853f' :
@@ -8,8 +8,15 @@
                                  planter.color === 'Black' ? '#2c2c2c' : '#f8f8f8'"
        style="height: 250px; background-size: cover; background-position: center;">
     
+    <!-- Console Image for Entryway Console items -->
+    <img *ngIf="planter.id === 1 || planter.id === 2" 
+         [src]="planter.id === 1 ? 'assets/images/CONSOLE.png' : 'assets/images/console2.png'" 
+         [alt]="planter.title"
+         class="position-absolute top-0 start-0 w-100 h-100"
+         style="object-fit: cover; object-position: center; z-index: 1;">
+    
     <!-- Planter representation -->
-    <div class="planter-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">
+    <div class="planter-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center" *ngIf="planter.id !== 1 && planter.id !== 2">
       <!-- Planter pot -->
       <div class="planter-pot" 
            [style.width]="planter.size === 'Large' ? '70px' : planter.size === 'Medium' ? '60px' : '50px'"
@@ -37,7 +44,7 @@
       
       <!-- Hanging element for hanging planters -->
       <div class="hanging-element position-absolute" 
-           *ngIf="planter.style === 'Bohemian'"
+           *ngIf="planter.style === 'Bohemian' && planter.id !== 2"
            style="top: 10px; left: 50%; transform: translateX(-50%); width: 40px; height: 8px; background: rgba(139, 115, 85, 0.6); border-radius: 4px;">
       </div>
     </div>

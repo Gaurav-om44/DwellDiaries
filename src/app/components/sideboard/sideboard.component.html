@@ -1,0 +1,58 @@
+<div class="sideboard-card h-100">
+  <div class="sideboard-image position-relative overflow-hidden rounded-3 mb-3" (click)="openImageModal()" style="cursor: pointer;" 
+       [style.background-color]="sideboard.color === 'White' ? '#ffffff' : 
+                                 sideboard.color === 'Natural' ? '#f5f5dc' :
+                                 sideboard.color === 'Brown' ? '#8b4513' :
+                                 sideboard.color === 'Gray' ? '#808080' :
+                                 sideboard.color === 'Black' ? '#2c2c2c' : '#f8f8f8'"
+       style="height: 250px; background-size: cover; background-position: center;">
+    
+    <!-- Sideboard Image -->
+    <img [src]="sideboard.image" 
+         [alt]="sideboard.title"
+         class="position-absolute top-0 start-0 w-100 h-100"
+         style="object-fit: cover; object-position: center; z-index: 1;">
+    
+    <!-- Sideboard Info Overlay -->
+    <div class="sideboard-info position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-between p-3" 
+         style="background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.3) 100%); z-index: 2;">
+      <div class="sideboard-badge">
+        <span class="badge bg-white text-dark px-2 py-1 rounded-pill" style="font-size: 0.7rem;">
+          {{ sideboard.style }}
+        </span>
+      </div>
+      <div class="sideboard-price">
+        <span class="badge bg-primary px-2 py-1 rounded-pill" style="font-size: 0.7rem;">
+          {{ sideboard.price }}
+        </span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="sideboard-content">
+    <h5 class="fw-bold text-dark mb-2">{{ sideboard.title }}</h5>
+    <p class="text-muted small mb-3">{{ sideboard.description }}</p>
+    
+    <div class="sideboard-features mb-3">
+      <div class="row g-2">
+        <div class="col-6" *ngFor="let feature of sideboard.features">
+          <span class="badge bg-light text-dark border px-2 py-1" style="font-size: 0.65rem;">
+            {{ feature }}
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="sideboard-actions">
+      <button class="btn btn-primary btn-sm w-100" (click)="getQuote()">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" class="me-1">
+          <path d="M8 0C3.58 0 0 3.58 0 8s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8zm0 14c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z"/>
+          <path d="M8 4c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/>
+        </svg>
+        Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+

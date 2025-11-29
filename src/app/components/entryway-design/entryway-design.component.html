@@ -4,7 +4,8 @@
     <div class="col-5">
       <div class="design-image position-relative overflow-hidden h-100" 
            [style.background-image]="'url(' + design.image + ')'"
-           style="background-size: cover; background-position: center; background-repeat: no-repeat;">
+           style="background-size: cover; background-position: center; background-repeat: no-repeat; cursor: pointer;"
+           (click)="openImageModal()">
       </div>
     </div>
     

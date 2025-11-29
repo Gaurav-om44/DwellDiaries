@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ImageModalService } from '../../services/image-modal.service';
 
 export interface AccentChair {
   id: number;
@@ -22,7 +23,10 @@ export class AccentChairComponent implements OnInit {
   @Input() chair!: AccentChair;
   @Input() index!: number;
 
-  constructor(private router: Router) { }
+  constructor(
+    private router: Router,
+    private imageModalService: ImageModalService
+  ) { }
 
   ngOnInit(): void {
   }
@@ -41,5 +45,9 @@ export class AccentChairComponent implements OnInit {
         type: 'chair'
       } 
     });
+  }
+
+  openImageModal(): void {
+    this.imageModalService.openModal(this.chair.image, this.chair.title);
   }
 }

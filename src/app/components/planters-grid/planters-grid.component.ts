@@ -23,7 +23,7 @@ export class PlantersGridComponent implements OnInit {
   planters: Planter[] = [
     {
       id: 1,
-      title: 'Ceramic Planter',
+      title: 'Entryway Console',
       description: 'A beautiful ceramic planter with glazed finish and modern design, perfect for indoor plants.',
       image: 'assets/images/planter-ceramic.jpg',
       material: 'Ceramic',
@@ -35,7 +35,7 @@ export class PlantersGridComponent implements OnInit {
     },
     {
       id: 2,
-      title: 'Hanging Planter',
+      title: 'Entryway Console',
       description: 'An elegant hanging planter with macrame hanger and bohemian style for vertical gardens.',
       image: 'assets/images/planter-hanging.jpg',
       material: 'Ceramic & Macrame',
